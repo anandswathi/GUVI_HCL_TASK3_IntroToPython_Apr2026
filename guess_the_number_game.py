@@ -8,7 +8,8 @@ Key Elements:
     Conditions: Check if the guess is too high, too low, or correct.
     Loops: Allow multiple guesses until the correct number is found.
 """
-import random # Import random module for random number selection
+import random # Import random module for random selection
+
 # Define range globally
 start_index = 0
 end_index = 11
