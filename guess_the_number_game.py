@@ -8,7 +8,7 @@ Key Elements:
     Conditions: Check if the guess is too high, too low, or correct.
     Loops: Allow multiple guesses until the correct number is found.
 """
-import random # Import random module for random selection
+import random # Import random module for random number selection
 # Define range globally
 start_index = 0
 end_index = 11
@@ -24,7 +24,6 @@ def random_num_generator():
     random_num = random.randint(start_index, end_index)
     return random_num
 
-# Game Logic method
 def play_game():
     """
     Main function controlling the game flow and containing the game logic
