@@ -52,7 +52,7 @@ def play_game():
     attempt_count = 0
 
     # Allowed attempt limit
-    attempt_limit = 2
+    attempt_limit = 3
 
     print("Scrambled word: ", scrambled_word)
     print("Attempts Allowed: {}".format(attempt_limit))
