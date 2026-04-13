@@ -57,19 +57,19 @@ def play_game():
     print("Scrambled word: ", scrambled_word)
     print("Attempts Allowed: {}".format(attempt_limit))
 
-    # Get the player guess
-    player_guess = input("\nYour turn to guess: ").lower()
-    attempt_count += 1
-
     # while condition to check user guesses the word correctly within limited attempts
     while attempt_count < attempt_limit:
+
+        # Get the player guess
+        player_guess = input("\nYour guess: ").lower()
+        attempt_count += 1
+
         if player_guess == unscrambled_word:
             print("Yay! You guessed the word correctly in {} attempts!".format(attempt_count))
             break
         else:
             print("OOPS!!! Wrong guess. Try again")
-            player_guess = input("Your guess: ").lower()
-            attempt_count += 1
+
     else:
         print("\n You Lost!!!...Better luck next time! ")
 
