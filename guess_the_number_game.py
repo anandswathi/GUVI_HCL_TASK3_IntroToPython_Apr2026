@@ -37,19 +37,32 @@ def play_game():
     # Attempt count to calculate the no. of attempts until success
     attempt_count = 0
 
+    # Define empty string guess_status to store the guess status
+    guess_status = ""
+
     print("Secret number has been selected")
     print("Guess number between {} and {}".format(start_index, end_index))
 
     # Get the player guess
     player_guess = int(input("Enter your guess: "))
     attempt_count += 1
+
     # while condition to check until user guesses the number correctly
     while player_guess != random_num:
-        print("Sorry!!! Wrong guess. Try again")
+
+        # conditions to check the guess status
+        if player_guess > random_num:
+            guess_status = "Too High"
+        elif player_guess < random_num:
+            guess_status = "Too Low"
+        else:
+            guess_status = "Correct"
+
+        print("Sorry!!! Wrong guess - Your guess is {}. Try again".format(guess_status))
         player_guess = int(input("Your guess: "))
         attempt_count += 1
     else:
-        print("Yay! You guessed the number correctly in {} attempts!".format(attempt_count))
+        print("Yay! You guessed the number {} in {} attempts!".format(guess_status, attempt_count))
 
 
 def main():
